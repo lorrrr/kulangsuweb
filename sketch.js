@@ -27,8 +27,6 @@ function setup() {
 
   var canvas = createCanvas(windowWidth, windowWidth / 15 * 7);
   canvas.parent('sketch-holder');
-  canvas.position(0,0);
-  canvas.style('z-index', '-1');
   canvas.style('display', 'block');
 
   background(255);
