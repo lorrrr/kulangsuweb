@@ -34,7 +34,7 @@ function setup() {
   fill(255);
  // rect(0,0,windowWidth, windowWidth / 15 * 7);
  
-  fill(0);
+  
   rectSize = windowWidth / 15;
   gutter = rectSize * gutterRatio;
   rectSize = rectSize * (1 - gutterRatio);
