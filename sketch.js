@@ -32,7 +32,7 @@ function setup() {
   background(255);
   noStroke();
   fill(255);
-  rect(0,0,windowWidth, windowWidth / 15 * 7);
+ // rect(0,0,windowWidth, windowWidth / 15 * 7);
  
   fill(0);
   rectSize = windowWidth / 15;
