@@ -12,14 +12,14 @@ var type;
 function preload(){
   logo = loadImage("logo.jpg");
   type = loadImage("text.jpg");
-  img[1] = loadImage("blue.jpg");
-  img[2] = loadImage("gold.jpg");
-  img[3] = loadImage("red.jpg");
-  img[0] = loadImage("grey.jpg");
-  img[4] = loadImage("blue1.jpg");
-  img[5] = loadImage("gold1.jpg");
-  img[6] = loadImage("red1.jpg");
-  img[7] = loadImage("grey1.jpg");
+  img[1] = loadImage("blue.png");
+  img[2] = loadImage("gold.png");
+  img[3] = loadImage("red.png");
+  img[0] = loadImage("grey.png");
+  img[4] = loadImage("blue1.png");
+  img[5] = loadImage("gold1.png");
+  img[6] = loadImage("red1.png");
+  img[7] = loadImage("grey1.png");
 
 }
 
@@ -32,14 +32,14 @@ function setup() {
   canvas.style('display', 'block');
 
   background(255);
- 
+
   fill(0);
   rectSize = windowWidth / 15;
   gutter = rectSize * gutterRatio;
   rectSize = rectSize * (1 - gutterRatio);
 
-  
-  
+
+
 }
 
 function draw() {
@@ -56,12 +56,11 @@ function draw() {
       x = x - diagCount + columns;
 
     }
-  
+
     image(img[int(random(0, 8))], x * (rectSize + gutter), y * (rectSize + gutter), rectSize, rectSize);
-    //image(img[1],x*(rectSize+gutter), y*(rectSize+gutter));
   }
 
- 
+
   var j;
   if (diagCount>=22){
   for (i = 0; i < columns; i++) {
@@ -80,15 +79,15 @@ function draw() {
 
   if (diagCount>=5){
     image(logo, 2 * (rectSize + gutter), 2 * (rectSize + gutter), rectSize*3+gutter*2, rectSize);
-    
+
   }
   if (diagCount >= 14){
     image(type, 10 * (rectSize + gutter), 3 * (rectSize + gutter), rectSize*3+gutter*2, rectSize*2+gutter);
   }
-  
+
    diagCount++;
   }
-  
+
 
 
   function windowResized() {
