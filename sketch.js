@@ -14,7 +14,7 @@ var type;
 
 function preload(){
   logo = loadImage("logo.jpg");
-  type = loadImage("text.jpg");
+  type = loadImage("text.png");
   img[1] = loadImage("blue.png");
   img[2] = loadImage("gold.png");
   img[3] = loadImage("red.png");
@@ -30,16 +30,16 @@ function setup() {
   var canvas = createCanvas(windowWidth, windowWidth / 15 * 7);
   canvas.parent('sketch-holder');
   canvas.position(0,0);
-  
+
   background(255);
- 
+
   fill(0);
   rectSize = windowWidth / 15;
   gutter = rectSize * gutterRatio;
   rectSize = rectSize * (1 - gutterRatio);
 
-  
-  
+
+
 }
 
 function draw() {
@@ -56,12 +56,12 @@ function draw() {
       x = x - diagCount + columns;
 
     }
-  
+
     image(img[int(random(0, 8))], x * (rectSize + gutter), y * (rectSize + gutter), rectSize, rectSize);
     //image(img[1],x*(rectSize+gutter), y*(rectSize+gutter));
   }
 
- 
+
   var j;
   if (diagCount>=22){
   for (i = 0; i < columns; i++) {
@@ -78,11 +78,12 @@ function draw() {
     }
 }
 
- 
-  
+  image(type, (rectSize+gutter)*6, (rectSize+gutter)*3);
+
+
    diagCount++;
   }
-  
+
 
 
   function windowResized() {
