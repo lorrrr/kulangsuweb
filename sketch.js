@@ -78,7 +78,8 @@ function draw() {
     }
 }
   if (diagCount>=10){
-  image(type, (rectSize+gutter)*6, (rectSize+gutter)*3,rectSize*3+gutter*2, rectSize);
+    
+    image(type, (rectSize+gutter)*6-1, (rectSize+gutter)*3-1,rectSize*3+gutter*2+2, rectSize+2);
 }
  
    diagCount++;
