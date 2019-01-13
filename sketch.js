@@ -46,7 +46,7 @@ function draw() {
   var i;
   fill(240);
   noStroke();
-  frameRate(47);
+  frameRate(44);
   for (i = 0; i < diag[diagCount]; i++) {
 
     var y = i;
