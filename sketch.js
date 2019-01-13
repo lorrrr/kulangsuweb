@@ -1,7 +1,7 @@
 
 
 
-var diag = [0, 1, 2, 3, 4, 5, 6, 7, 7,7,7,7,7,7,7,7, 6, 5, 4, 3, 2, 1];
+var diag = [0, 1, 2, 3, 4, 5, 6, 7, 8,8,8,8,8,8,8,8,8,7, 6, 5, 4, 3, 2, 1];
 var diagCount = 0;
 var rectSize;
 var gutter;
@@ -27,7 +27,7 @@ function preload(){
 }
 function setup() {
 
-  var canvas = createCanvas(windowWidth, windowWidth / 15 * 7);
+  var canvas = createCanvas(windowWidth, windowWidth / 15 * 8);
   canvas.parent('sketch-holder');
   canvas.position(0,0);
 
@@ -46,7 +46,7 @@ function draw() {
   var i;
   fill(240);
   noStroke();
-  frameRate(45);
+  frameRate(47);
   for (i = 0; i < diag[diagCount]; i++) {
 
     var y = i;
@@ -65,7 +65,7 @@ function draw() {
   var j;
   if (diagCount>=22){
   for (i = 0; i < columns; i++) {
-    for (j = 0; j < 7; j++) {
+    for (j = 0; j < 8; j++) {
       if ((abs(pmouseX-mouseX)>1) && (abs(pmouseY-mouseY)>1))
       if (mouseX >= i * (rectSize + gutter) && mouseX <= i * (rectSize + gutter) + rectSize) {
         if (mouseY >= j * (rectSize + gutter) && mouseY <= j * (rectSize + gutter) + rectSize) {
@@ -77,9 +77,9 @@ function draw() {
       }
     }
 }
-  if (diagCount>=10){
+  if (diagCount>=7){
     
-    image(type, (rectSize+gutter)*6-1, (rectSize+gutter)*3-1,rectSize*3+gutter*2+2, rectSize+2);
+    image(type, (rectSize+gutter)*3-1, (rectSize+gutter)*3-1,rectSize*3+gutter*2+2, rectSize+2);
 }
  
    diagCount++;
@@ -90,7 +90,7 @@ function draw() {
   function windowResized() {
     diagCount = 0;
     background(255);
-    resizeCanvas(windowWidth, windowWidth / 15 * 7);
+    resizeCanvas(windowWidth, windowWidth / 15 * 8);
     rectSize = windowWidth / columns;
     gutter = rectSize * gutterRatio;
     rectSize = rectSize * (1 - gutterRatio);
