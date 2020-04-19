@@ -27,7 +27,7 @@ function preload(){
 }
 function setup() {
 
-  var canvas = createCanvas(windowWidth, windowWidth / 15 * 10);
+  var canvas = createCanvas(windowWidth, windowWidth / 15 * 9);
   canvas.parent('sketch-holder');
   canvas.position(0,0);
 
@@ -70,7 +70,7 @@ function draw() {
   var j;
 //  if (diagCount>=22){
   for (i = 0; i < columns; i++) {
-    for (j = 0; j < 10; j++) {
+    for (j = 0; j < 9; j++) {
       if ((abs(pmouseX-mouseX)>1) && (abs(pmouseY-mouseY)>1))
       if (mouseX >= i * (rectSize + gutter) && mouseX <= i * (rectSize + gutter) + rectSize) {
         if (mouseY >= j * (rectSize + gutter) && mouseY <= j * (rectSize + gutter) + rectSize) {
@@ -95,7 +95,7 @@ function draw() {
   function windowResized() {
     diagCount = 0;
     background(255);
-    resizeCanvas(windowWidth, windowWidth / 15 * 10);
+    resizeCanvas(windowWidth, windowWidth / 15 * 9);
     rectSize = windowWidth / columns;
     gutter = rectSize * gutterRatio;
     rectSize = rectSize * (1 - gutterRatio);
