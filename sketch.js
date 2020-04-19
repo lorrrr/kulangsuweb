@@ -99,5 +99,6 @@ function draw() {
     rectSize = windowWidth / columns;
     gutter = rectSize * gutterRatio;
     rectSize = rectSize * (1 - gutterRatio);
+    setup();
     redraw();
   }
