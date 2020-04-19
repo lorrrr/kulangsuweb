@@ -38,20 +38,12 @@ function setup() {
   gutter = rectSize * gutterRatio;
   rectSize = rectSize * (1 - gutterRatio);
 
-  for (i = 0; i <10; i++) {
-
-    var y = i;
-    var x = diagCount - 1 - i;
-    if (diagCount > columns) {
-      y = y + diagCount - columns;
-      x = x - diagCount + columns;
-
-    }
-
+ for (var x=0; x<columns;x++){
+   for (var y=0; y<9;y++){
     image(img[int(random(0, 8))], x * (rectSize + gutter), y * (rectSize + gutter), rectSize, rectSize);
     //image(img[1],x*(rectSize+gutter), y*(rectSize+gutter));
   }
-
+}
 
 }
 
